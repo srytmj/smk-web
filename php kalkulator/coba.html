@@ -1,0 +1,48 @@
+<?php
+include 'fungsi_nama.php';
+$persegi = luasPersegi($_POST['s']);
+$segitiga = luasSegitiga($_POST['a'], $_POST['t']);
+$persegi_panjang = luasPersegi_panjang($_POST['p'], $_POST['l']);
+$lingkaran = luasLingkaran($_POST['r']);
+if (isset($_POST['submit']))
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      *{font-family: sans-serif;}
+      .kotak{margin: 20px;}
+    </style>
+    <meta charset="utf-8">
+    <title>Hitung Bangun Datar</title>
+  </head>
+  <body>
+    <form action="index_nama.php" method="post">
+      <div class="kotak">
+        <label><h2>Persegi</h2>Masukan Sisi   : </label><br>
+        <input type="text" name="s">
+        <p> Hasilnya adalah = <?php echo $persegi;?></p>
+      </div>
+      <div class="kotak">
+        <label><h2>Segitiga</h2>Masukan Alas   : </label><br>
+        <input type="text" name="a"><br>
+        <label>Masukan Tinggi : </label><br>
+        <input type="text" name="t">
+        <p> Hasilnya adalah = <?php echo $segitiga;?></p>
+      </div>
+      <div class="kotak">
+        <label><h2>Persegi Panjang</h2>Masukan panjang : </label><br>
+        <input type="text" name="p"><br>
+        <label>Masukan Lebar : </label><br>
+        <input type="text" name="l">
+        <p> Hasilnya adalah = <?php echo $persegi_panjang;?></p>
+      </div>
+      <div class="kotak">
+        <label><h2>Lingkaran</h2>Masukan Jari Jari : </label><br>
+        <input type="text" name="r">
+        <p> Hasilnya adalah = <?php echo $lingkaran;?></p>
+      </div>
+      <input class="kotak" type="submit" name="submit">
+    </form>
+  </body>
+</html>

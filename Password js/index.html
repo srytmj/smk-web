@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Latian</title>
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <h1>Form Login</h1>
+    <br><br>
+    <form class="" action="index.html" method="post">
+      <label for="">username</label>
+      <br><br>
+      <input type="text" name="" value="">
+      <br><br>
+      <label for="">password</label>
+      <br><br>
+      <input type="password" name="" class="pass">
+      <br>
+      <input type="checkbox" name="" class="cbox">
+      <br>
+      <button type="button" name="button">login</button>
+    </form>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.cbox').click(function(){
+          if($(this).is(':checked')){
+            $('.pass').attr('type', 'text');
+          }else{
+            $('.pass').attr('type', 'pass');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
